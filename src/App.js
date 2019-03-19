@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import AffichageProd from './MesPackets/AffichageProd'
+import AjouterProd from './MesPackets/AjouterProd'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import './App.css'
+
+const App = () => {
+  const ProduitsData = [
+  ]
+
+  const [Produits, setProduits] = useState(ProduitsData)
+  const [count, setCount] = useState(0)
+  
+  const addProduit = produit => {
+		produit.id = count
+		setProduits([ ...Produits, produit ])
+  }  
+  return (
+    <div>
+    <div className="container"> 
+        <AjouterProd addProduit={addProduit} setCount={setCount} count={count}/>
+        <AffichageProd Produits={Produits}/>
+          
+    </div>
+  </div>
+  )
+  
 }
 
-export default App;
+export default App
