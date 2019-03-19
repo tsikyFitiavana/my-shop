@@ -1,0 +1,12 @@
+.ajoutProd{
+    background-color:rgba(255, 255, 255, 0.9);
+    width: 37%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 75vh;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    border-radius:20px;
+    box-shadow: 2px 7px rgba(0, 0, 0, 0.13);
+}
