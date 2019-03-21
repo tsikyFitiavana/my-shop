@@ -1,16 +1,12 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css';
-
-
+import './affichage.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import Like from './Like'
+import Exemple from './modalComponnent'
 
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
 const AffichageProd = props => {
-  function like(){
-    
-    
-   document.getElementById('nbrLike').innerHTML = (parseInt(document.getElementById('nbrLike').innerHTML)+1);
-  }
   return(
   <div className="row">
 			
@@ -19,17 +15,24 @@ const AffichageProd = props => {
           
           <div key = {produit.id} className="col-md-4">
 					<div  className=" card">
-            <img className="card-img-top" src="..." alt="my Card"/>
 						<div className="card-body">
             <h5 className="card-title">{produit.name}</h5>
-              <p className="card-text">{produit.DescriptionProd}</p>
+              <div className="card-text" id="tronque">{produit.DescriptionProd}</div>
 
-              <div>{produit.prixProd}</div>
+              <div id="adroit">{produit.prixProd}</div>
             
             </div>
             <div className="card-footer">
-              <p onClick={()=>{like()}}>like</p>
-              <label id="nbrLike"></label>
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4" >
+                <Like/>
+              </div>
+              <div className="col-md-4">
+                <Exemple/>
+              </div>
+            </div>
+
             </div>
 					</div>
           </div>

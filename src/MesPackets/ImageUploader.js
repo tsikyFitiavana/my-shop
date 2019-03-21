@@ -5,7 +5,7 @@ class ImageUpload extends React.Component {
  
     constructor(props) {
         super(props);
-         this.state = { pictures: [] };
+         this.state = './images'
          this.onDrop = this.onDrop.bind(this);
     }
  
@@ -24,7 +24,7 @@ class ImageUpload extends React.Component {
                 onChange={this.onDrop}
                 imgExtension={['.jpg', '.gif', '.png', '.gif']}
             />
-            <img src={this.pictures} alt="hello world"/>
+            <img src='' alt="hello world"/>
             </div>
         );
     }

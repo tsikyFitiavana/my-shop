@@ -1,0 +1,8 @@
+#comment{
+    word-wrap: break-word;
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  #margTop{
+    margin-bottom: 50px;
+  }
