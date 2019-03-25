@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './ajouterPro.css'
 
 const AjouterProd = props => {
-	const initialFormState = { id: null, name: '', prixProd: '', DescriptionProd:''}
+	const initialFormState = { id: null, name: '', prixProd: '', DescriptionProd:'',imageProd:''}
 	const [ produit, setUser ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -32,20 +32,25 @@ const AjouterProd = props => {
                             setUser(initialFormState)
                         }
                     }} className="form-group">
-                        <label>Produit</label>
-                        <input type="text" name="name" value={produit.name} onChange={handleInputChange} />
+                    <table>
+                        <tr>
+                            <td><label>Produit</label></td>
+                            <td><input className="alonger" type="text" name="name" value={produit.name} onChange={handleInputChange} /></td>
+                        </tr>
+                        <tr>
+                            <td><label>Prix</label></td>
+                            <td><input className="alonger" type="text" name="prixProd" value={produit.prixProd} onChange={handleInputChange} /><br/>
+                            <p id="addErreur"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Description</label></td>
+                            <td><textarea className="alonger" type="text" name="DescriptionProd" value={produit.DescriptionProd} onChange={handleInputChange} ></textarea></td>
+                        </tr>
+                    </table>
+                        <label id="file"> File<input  type="file" name="fichier"/></label>
                         <br/>
-                        <br/>
-                        <label>Prix</label>
-                        <input type="text" name="prixProd" value={produit.prixProd} onChange={handleInputChange} />
-                        <p id="addErreur"></p>
-                        <br/>
-                        <br/>
-                        <label>Description</label>
-                        <textarea type="text" name="DescriptionProd" value={produit.DescriptionProd} onChange={handleInputChange} ></textarea>
-                        <br/>
-                        <br/>
-                        <button className="btn btn-info btn-sm">Ajouter</button>
+                        <button className="btn btn-primary btn-md" id="agrandir">Ajouter</button>
                 </form>
             </div>
 		</div>

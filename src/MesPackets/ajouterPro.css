@@ -1,12 +1,40 @@
 .ajoutProd{
-    background-color:rgba(255, 255, 255, 0.9);
-    width: 37%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: 75vh;
+    width: 35%;
+    height: 350px;
+    margin-left: 350px;
+    border: 2px solid rgb(10, 10, 10);
     margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px
+}
+#agrandir{
+    /* margin-left: 35px; */
+    width: 334px;
+}
+.alonger{
+    width: 250px;
+}
+#addErreur{
+    color: red;
+    margin-left: 60px;
+}
+input[type="file"] {
+    display: none;
+} 
+#file{
+    padding: 10px;
+    background: rgb(88, 85, 85); 
+    display: table;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 2px;
     text-align: center;
-    border: 1px solid lightgrey;
-    border-radius:20px;
-    box-shadow: 2px 7px rgba(0, 0, 0, 0.13);
+    margin-left: 130px;
+    margin-top: 10px;
+    padding-top: 5px!important;
+    line-height: 30px;
 }
