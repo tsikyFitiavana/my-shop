@@ -6,3 +6,6 @@
   #margTop{
     margin-bottom: 50px;
   }
+ #affichageErreurComment{
+   color:red;
+ }

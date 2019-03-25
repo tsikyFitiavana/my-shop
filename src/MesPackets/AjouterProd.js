@@ -33,20 +33,23 @@ const AjouterProd = props => {
                         }
                     }} className="form-group">
                     <table>
-                        <tr>
-                            <td><label>Produit</label></td>
-                            <td><input className="alonger" type="text" name="name" value={produit.name} onChange={handleInputChange} /></td>
-                        </tr>
-                        <tr>
-                            <td><label>Prix</label></td>
-                            <td><input className="alonger" type="text" name="prixProd" value={produit.prixProd} onChange={handleInputChange} /><br/>
-                            <p id="addErreur"></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label>Description</label></td>
-                            <td><textarea className="alonger" type="text" name="DescriptionProd" value={produit.DescriptionProd} onChange={handleInputChange} ></textarea></td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td><label>Produit</label></td>
+                                <td><input className="alonger" type="text" name="name" value={produit.name} onChange={handleInputChange} /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Prix</label></td>
+                                <td><input className="alonger" type="text" name="prixProd" value={produit.prixProd} onChange={handleInputChange} /><br/>
+                                <p id="addErreur"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Description</label></td>
+                                <td><textarea className="alonger" type="text" name="DescriptionProd" value={produit.DescriptionProd} onChange={handleInputChange} ></textarea></td>
+                            </tr>
+                        </tbody>
+                        
                     </table>
                         <label id="file"> File<input  type="file" name="fichier"/></label>
                         <br/>
