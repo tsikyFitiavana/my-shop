@@ -2,7 +2,7 @@ import React from 'react'
 import './affichage.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Like from './Like'
-import Exemple from './modalComponnent'
+import PopupModal from './modalComponnent'
 
 import 'react-confirm-alert/src/react-confirm-alert.css'
 
@@ -13,13 +13,14 @@ const AffichageProd = props => {
 			{props.Produits.length > 0 ? (
 				props.Produits.map(produit => (
           
-          <div key = {produit.id} className="col-md-4">
+          <div key = {produit.id} className="col-md-4" id="metreMarg">
 					<div  className=" card">
+          <img className="card-img-top" src="..." alt="Card cap"/>
 						<div className="card-body">
             <h5 className="card-title">{produit.name}</h5>
               <div className="card-text" id="tronque">{produit.DescriptionProd}</div>
 
-              <div id="adroit">{produit.prixProd}</div>
+              <div id="adroit">{produit.prixProd}<label>Ar</label></div>
             
             </div>
             <div className="card-footer">
@@ -29,7 +30,7 @@ const AffichageProd = props => {
                 <Like/>
               </div>
               <div className="col-md-4">
-                <Exemple/>
+                <PopupModal/>
               </div>
             </div>
 

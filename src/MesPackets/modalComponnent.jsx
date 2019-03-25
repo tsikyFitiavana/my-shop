@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Comment from './Commentaire';
 import './modal.css'
 
-class Example extends React.Component {
+class PopupModal extends React.Component {
     constructor(props, context) {
       super(props, context);
   
@@ -43,4 +43,4 @@ class Example extends React.Component {
     }
   }
   
-  export default Example
+  export default PopupModal
